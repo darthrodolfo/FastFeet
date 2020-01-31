@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:react/recommended',
+    // 'plugin:react/recommended',
     'airbnb',
     'prettier',
     'airbnb-base'
@@ -21,7 +21,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react',
+    // 'react',
     'prettier'
   ],
   rules: {
