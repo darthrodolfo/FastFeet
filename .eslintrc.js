@@ -4,10 +4,10 @@ module.exports = {
     node: true,
   },
   extends: [
-    // 'plugin:react/recommended',
+    //'plugin:react/recommended',
     'airbnb',
     'prettier',
-    'airbnb-base'
+    //'airbnb-base'
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,7 +21,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    // 'react',
+     //'react',
     'prettier'
   ],
   rules: {
@@ -29,6 +29,9 @@ module.exports = {
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    //"global-require": "off",
+   // "import/prefer-default-export": "off",
+    //"no-unsued-expressions": ["error", { "allowTaggedTemplates":true}]
   },
 };
