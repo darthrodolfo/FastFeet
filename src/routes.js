@@ -7,21 +7,14 @@ import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
-routes.use(authMiddleware);
-// routes.get('/', async (req, res) => {
-//   const user = await User.create({
-//     name: 'Rods',
-//     email: 'rodolfo.venancio@gmail.com',
-//     password_hash: 'loremipsum',
-//   });
-
-//   return res.json(user);
-// });
-
-routes.get('/', (req, res) => res.json({ get_teste: 'test' }));
+routes.get('/users', (req, res) => res.json({ get_teste: 'test' }));
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
+
+routes.use(authMiddleware);
+
 routes.put('/users', UserController.update);
+
 // routes.delete();
 // routes.put();
 
