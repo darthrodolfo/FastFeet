@@ -15,15 +15,15 @@ module.exports = {
       rua: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       numero: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       complemento: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.STRING,
         defaultValue: false,
-        allowNull: false,
       },
       estado: {
         type: Sequelize.STRING,
@@ -48,7 +48,7 @@ module.exports = {
     });
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: queryInterface => {
     return queryInterface.dropTable('recipients');
   },
 };
