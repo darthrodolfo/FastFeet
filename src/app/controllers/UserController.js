@@ -30,6 +30,10 @@ class UserController {
     return res.json(user);
   }
 
+  async index(req, res) {
+    return res.json(await User.findAll());
+  }
+
   async update(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
