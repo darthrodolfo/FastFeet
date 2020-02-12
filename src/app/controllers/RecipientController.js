@@ -88,6 +88,7 @@ class RecipientController {
   }
 
   async delete(req, res) {
+    // WIP !!!!!!!!!!
     const { receiptId } = req.params;
 
     const rowsDeleted = await Recipient.destroy({ where: { id: receiptId } });
